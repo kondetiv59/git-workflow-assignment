@@ -1,32 +1,32 @@
 1. git init
-   Initializes a new, empty local Git repository inside the current project folder.
+   Creates the hidden .git tracking directory inside git-workflow-project to turn the local folder into a version-controlled repository.
 
 2. git add <file>
-   Stages new or modified files so they are prepared for the next commit.
+   Moves specified files (such as index.html, about.html, and .gitignore) into the staging index before recording a commit.
 
 3. git commit -m "<message>"
-   Records a permanent snapshot of the staged changes in the repository history with a descriptive message.
+   Saves all currently staged modifications permanently into the local repository history along with a summary note.
 
 4. git branch <branch-name>
-   Creates a new branch pointer to allow isolated development without affecting the main branch.
+   Sets up a separate development line named 'feature' so edits can be tested independently from the main codebase.
 
 5. git checkout <branch-name>
-   Switches the active working directory to the specified branch.
+   Switches the active working tree between the 'main' and 'feature' branches.
 
 6. git merge --no-ff <branch-name>
-   Integrates changes from the specified branch into the current branch while preserving a merge commit in history.
+   Combines the completed edits from the 'feature' branch back into 'main' while recording an explicit merge commit.
 
 7. git log --oneline --graph --all
-   Displays a compact visual commit history showing all commits, branches, and merges across the repository.
+   Prints a condensed ASCII branch diagram displaying every commit hash, branch pointer, and merge across the project.
 
 8. git status
-   Displays the current state of the working directory and staging area, confirming tracked, modified, and ignored files.
+   Checks which working files are staged, modified, or successfully excluded by .gitignore (such as app.log and temp/).
 
 9. git revert HEAD
-   Safely undoes the most recent commit by creating a new inverse commit that reverses its changes.
+   Reverses the changes introduced in the previous commit by generating a new follow-up commit that restores the prior file state.
 
 10. git remote add origin <url>
-    Connects the local Git repository to a remote GitHub repository under the alias 'origin'.
+    Links the local project folder to the remote GitHub repository (kondetiv59/git-workflow-assignment) under the name 'origin'.
 
 11. git push -u origin main
-    Uploads all local commits and branch history from the local 'main' branch to the remote GitHub repository.
+    Transfers all local commits on the 'main' branch up to GitHub and sets 'origin/main' as the default upstream target.
